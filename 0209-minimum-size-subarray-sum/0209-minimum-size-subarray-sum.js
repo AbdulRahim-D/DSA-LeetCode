@@ -16,7 +16,11 @@ let minLength = Infinity;
       size--;
     } else {
       size++;
-      sum += nums[++end];
+      end++;
+
+if (end < nums.length) {
+    sum += nums[end];
+}
     }
   }
   return minLength === Infinity ? 0 : minLength;
